@@ -1,0 +1,49 @@
+---
+sidebar: sidebar 
+permalink: task-viewing-gcp-storage.html 
+keywords: google cloud storage buckets, google cloud storage, google cloud storage working environment 
+summary: Depois de instalar um conetor no Google Cloud, o BlueXP  poderá descobrir automaticamente informações sobre os buckets do Google Cloud que residem na conta do Google onde o conetor é instalado. Um ambiente de trabalho do Google Cloud Storage é adicionado ao Canvas para que você possa visualizar essas informações. 
+---
+= Veja seus buckets do Google Cloud Storage
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+Depois de instalar um conetor no Google Cloud, o BlueXP  poderá descobrir automaticamente informações sobre os buckets do Google Cloud Storage que residem na conta do Google onde o conetor é instalado. Um ambiente de trabalho do Google Cloud Storage é adicionado ao Canvas para que você possa visualizar essas informações.
+
+Você pode ver detalhes sobre seus buckets do Google Cloud Storage, incluindo localização, status de acesso, classe de storage, capacidade total e usada e muito mais. Esses buckets podem ser usados como destinos para backup e recuperação do BlueXP , disposição em camadas do BlueXP  ou operações de cópia e sincronização do BlueXP .
+
+.Passos
+. https://docs.netapp.com/us-en/bluexp-setup-admin/task-quick-start-connector-google.html["Instale um conetor"^] Na conta do Google onde você deseja exibir seus buckets do Google Cloud Storage.
+. No menu de navegação, selecione *Storage > Canvas*.
++
+Você deve ver automaticamente um ambiente de trabalho do Google Cloud Storage logo após.
+
++
+image:screenshot-gcp-cloud-storage-we.png["Uma captura de tela de um ambiente de trabalho do Google Cloud Storage."]
+
+. Selecione o ambiente de trabalho e selecione uma ação no painel direito se quiser ativar os serviços do BlueXP  com o Google Cloud Storage.
++
+image:screenshot-gcp-cloud-storage-actions.png["Uma captura de tela que mostra o painel ações depois de selecionar um ambiente de trabalho do Google Cloud Storage. O painel mostra o número total de buckets e ações disponíveis."]
+
++
+link:task-gcp-enable-data-services.html["Veja quais serviços do BlueXP  estão disponíveis e saiba como usá-los com seus buckets do Google Cloud Storage"].
+
+. Selecione *entrar no ambiente de trabalho* ou clique duas vezes no ambiente de trabalho para ver detalhes sobre os intervalos na sua conta do Google.
++
+image:screenshot-gcp-cloud-storage-details.png["Uma captura de tela que mostra os detalhes de um ambiente de trabalho do Google Cloud Storage: O número total de buckets, capacidade e locais e, em seguida, uma tabela que mostra detalhes sobre cada bucket."]
+
++
+Além das colunas que aparecem por padrão, você pode rolar a página para exibir propriedades adicionais para o intervalo; por exemplo, o número de rótulos e o tipo de criptografia que foi ativado.
+
+
+
+.O que vem a seguir
+Você pode alterar algumas configurações de bucket diretamente do BlueXP  clicando image:button-horizontal-more.gif["os três pontos mais botão"] em for a bucket. link:task-change-gcp-bucket-settings.html["Acesse aqui para obter detalhes"].
+
+Você pode adicionar novos buckets clicando em *Add bucket*. link:task-add-gcp-bucket.html["Acesse aqui para obter detalhes"].

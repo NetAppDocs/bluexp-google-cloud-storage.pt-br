@@ -1,0 +1,151 @@
+---
+sidebar: sidebar 
+permalink: task-add-gcp-bucket.html 
+keywords: google cloud storage buckets, google cloud storage, add buckets 
+summary: Depois que seu ambiente de trabalho do Google Cloud Storage estiver disponível no Canvas, você poderá adicionar buckets adicionais diretamente do BlueXP . 
+---
+= Adicione buckets do Google Cloud Storage
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+Depois que seu ambiente de trabalho do Google Cloud Storage estiver disponível no Canvas, você poderá adicionar buckets adicionais diretamente do BlueXP .
+
+.Passos
+. No Canvas, clique duas vezes no ambiente de trabalho do Google Cloud Storage para exibir a página Visão geral dos buckets do Google Cloud Storage e clique em *Adicionar bucket*.
++
+image:screenshot-add-gcp-bucket-button.png["Uma captura de tela que mostra os detalhes de um ambiente de trabalho do Google Cloud Storage e o botão Adicionar bucket."]
+
++
+A página _Adicionar bucket_ é exibida.
+
++
+image:screenshot-add-gcp-bucket.png["Uma captura de tela mostrando a página Adicionar balde para que você possa criar seu próprio bucket do Google Cloud Storage."]
+
+. Insira as informações necessárias na seção _Detalhes do projeto_.
++
+[cols="25,75"]
+|===
+| Campo | Descrição 
+
+
+| Nome do intervalo | Introduza o nome que pretende utilizar para o intervalo. https://cloud.google.com/storage/docs/buckets#naming["Consulte a documentação do Google Cloud para obter os requisitos de nomenclatura"^]. 
+
+
+| Projeto Google  a| 
+Selecione o projeto Google que será o proprietário do bucket. Este pode ser o projeto principal onde o conetor foi implantado, ou pode ser um projeto diferente.
+
+Se você não vir nenhum projeto adicional na lista suspensa, você ainda não associou a conta de serviço do BlueXP  a outros projetos. Vá para o console do Google Cloud, abra o serviço IAM e selecione o projeto. Adicione a conta de serviço com a função BlueXP  a esse projeto. Você precisará repetir esta etapa para cada projeto.
+
+
+NOTE: Esta é a conta de serviço configurada para o BlueXP , https://docs.netapp.com/us-en/bluexp-setup-admin/task-set-up-permissions-google.html#set-up-permissions-for-the-connector["como descrito nesta página"^].
+
+
+
+| Etiquetas  a| 
+Os rótulos são metadados para seus recursos do Google Cloud. Você pode adicionar até 10 pares chave de rótulo:valor ao criar um bucket.
+
+https://cloud.google.com/compute/docs/labeling-resources["Consulte a documentação do Google Cloud para obter mais informações sobre rótulos"^].
+
+|===
+. Na seção _localização_, selecione o tipo de local e a região (ou regiões) onde o intervalo será criado. Pode selecionar entre três tipos diferentes de localizações.
++
+[cols="35,65"]
+|===
+| Se selecionar o "tipo de localização"... | Em seguida, selecione... 
+
+
+| Região | Uma única região a partir do campo "regiões disponíveis". 
+
+
+| Região dupla  a| 
+A localização geográfica (um único continente) no campo "localizações disponíveis" e, em seguida, selecione duas regiões no campo "regiões disponíveis".
+
+Você pode ativar a "replicação Turbo" se quiser garantir redundância geográfica para todos os objetos recém-escritos dentro de um destino de 15 minutos.
+
+
+
+| Multi-região | A multi-região geográfica a partir do campo "multi-regiões disponíveis". 
+|===
++
+Observe que todos os dados do Cloud Storage são redundantes em pelo menos duas zonas dentro de pelo menos um local geográfico assim que você os carrega. https://cloud.google.com/storage/docs/locations["Consulte a documentação do Google Cloud para obter mais informações sobre locais de bucket"^].
+
+. Na seção _Storage class_, selecione a classe de armazenamento que será usada para objetos em seu bucket. Você pode selecionar entre quatro classes de armazenamento ou selecionar _Autoclasse_ para que o Google ajuste a classe conforme necessário.
++
+[cols="25,75"]
+|===
+| Classe de armazenamento | Descrição 
+
+
+| Padrão | O armazenamento padrão é o melhor para dados que são acessados com frequência ("dados quentes") e/ou armazenados por apenas breves períodos de tempo. 
+
+
+| Nearline | O armazenamento Nearline é um serviço de armazenamento de baixo custo e altamente durável para armazenar dados acessados com pouca frequência. 
+
+
+| Coldline | O armazenamento Coldline é um serviço de armazenamento de baixo custo e altamente durável para armazenar dados acessados com pouca frequência. 
+
+
+| Arquivar | O storage de arquivamento é o serviço de storage de baixo custo e altamente durável para arquivamento de dados, backup on-line e recuperação de desastres. 
+
+
+| Classe automática | A classe automática faz a transição automática de objetos em seu bucket para as classes de armazenamento apropriadas com base no padrão de acesso de cada objeto. 
+|===
++
+As taxas de custo e recuperação são diferentes para cada classe de armazenamento. https://cloud.google.com/storage/docs/storage-classes["Consulte a documentação do Google Cloud para obter mais informações sobre classes de armazenamento"^].
+
+. Na seção _proteção_, escolha se você deseja usar ferramentas de proteção de dados para proteger objetos no bucket ou qualquer configuração de criptografia de dados para proteger o acesso aos seus dados.
++
+[cols="25,75"]
+|===
+| Proteção de dados | Descrição 
+
+
+| Nenhum | Por padrão, nenhuma ferramenta de proteção está ativada no balde. 
+
+
+| Controle de versão de objetos  a| 
+O intervalo manterá uma versão de objeto não atual sempre que você atualizar, substituir ou excluir uma versão de objeto ativo - mantendo continuamente uma versão protegida do objeto. Quando você seleciona "versão de objeto", você pode especificar duas opções:
+
+** *Número máximo de versões por objeto* - Digite o número de versões não atuais por objeto que será criado.
+** *Expire versões não atuais após* - Digite o número de dias após os quais os objetos antigos e não atuais serão removidos.
+
+
+
+
+| Política de retenção  a| 
+Uma política de retenção garante que todos os objetos atuais e futuros no bucket não podem ser excluídos ou substituídos até que atinjam a idade definida na política de retenção. Ao selecionar "Política de retenção", pode especificar duas opções:
+
+** *Reter objetos por* - Digite o número de segundos, dias, meses ou anos que os objetos serão retidos.
+** *Período de tempo* - Selecione se o tempo é em segundos, dias, meses ou anos.
+
+
+|===
++
+As ferramentas de controle de versão e proteção de política de retenção de objetos não podem ser ativadas ao mesmo tempo. Consulte a documentação do Google Cloud para https://cloud.google.com/storage/docs/object-versioning["mais informações sobre o controle de versão de objetos"^], e https://cloud.google.com/storage/docs/bucket-lock["mais informações sobre políticas de retenção"^].
+
++
+[cols="25,75"]
+|===
+| Criptografia de dados | Descrição 
+
+
+| Chave de criptografia gerenciada pelo Google | Por padrão, as chaves de criptografia gerenciadas pelo Google são usadas para criptografar seus dados. 
+
+
+| Chave de criptografia gerenciada pelo cliente (CMEK)  a| 
+Você pode usar suas próprias chaves gerenciadas pelo cliente para criptografia de dados em vez de usar as chaves de criptografia gerenciadas pelo Google padrão. Se você está planejando usar suas próprias chaves gerenciadas pelo cliente, precisará criá-las já para que você possa selecionar as chaves nesta página.
+
+As chaves podem estar no mesmo Projeto que o intervalo, ou você pode selecionar um Projeto diferente.
+
+|===
++
+Consulte a documentação do Google Cloud para https://cloud.google.com/storage/docs/encryption/default-keys["Mais informações sobre chaves de criptografia gerenciadas pelo Google"^], e https://cloud.google.com/storage/docs/encryption/customer-managed-keys["Mais informações sobre chaves de criptografia gerenciadas pelo cliente"^].
+
+. Clique em *Add* e o bucket é criado.
+

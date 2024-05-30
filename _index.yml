@@ -1,0 +1,31 @@
+---
+indexpage:
+  title: Documentação do Google Cloud Storage
+  summary: Comece a usar o Google Cloud Storage com seu sistema BlueXP .
+  keywords: google cloud storage, bluexp, system
+  lead: Comece a usar o Google Cloud Storage com seu sistema BlueXP .
+  tiles:
+  - title: Comece agora
+    links:
+    - title: Veja seus buckets do Google Cloud Storage
+      url: task-viewing-gcp-storage.html
+  - title: Gerenciar buckets do Google Cloud Storage
+    links:
+    - title: Adicione baldes
+      url: task-add-gcp-bucket.html
+    - title: Altere as definições do balde
+      url: task-change-gcp-bucket-settings.html
+    - title: Use os serviços de dados do NetApp com buckets do Google Cloud Storage
+      url: task-gcp-enable-data-services.html
+  - title: Mais informações
+    links:
+    - title: Documentação do Google Cloud Storage para gerenciamento fora do BlueXP 
+      url: https://cloud.google.com/storage/docs/creating-buckets
+  - title: Blogs & comunidade
+    links:
+    - title: Comunidade NetApp
+      url: https://community.netapp.com/t5/BlueXP-and-Services/ct-p/CDS
+    - title: BlueXP  blog
+      url: https://bluexp.netapp.com/blog/topic/cloud-manager
+    - title: Webinars na nuvem
+      url: https://bluexp.netapp.com/events

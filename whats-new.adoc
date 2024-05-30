@@ -1,0 +1,27 @@
+---
+sidebar: sidebar 
+permalink: whats-new.html 
+keywords: 'what"s new, features, new, release notes, bugs, limitations, known issues, enhancements, fixes' 
+summary: Saiba o que há de novo no Google Cloud Storage no BlueXP . 
+---
+= Novidades do Google Cloud Storage no BlueXP 
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+Saiba o que há de novo no Google Cloud Storage no BlueXP .
+
+
+
+== 10 de julho de 2023
+
+
+
+=== Capacidade de adicionar novos buckets e gerenciar buckets existentes do BlueXP
+
+Você já teve a capacidade de visualizar os buckets do Google Cloud Storage no BlueXP  Canvas por algum tempo. Agora você pode adicionar novos buckets e alterar propriedades para buckets existentes diretamente do BlueXP . https://docs.netapp.com/us-en/bluexp-google-cloud-storage/task-add-gcp-bucket.html["Veja como adicionar novos buckets do Google Cloud Storage"^].

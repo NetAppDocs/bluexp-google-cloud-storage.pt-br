@@ -1,0 +1,58 @@
+---
+sidebar: sidebar 
+permalink: task-change-gcp-bucket-settings.html 
+keywords: google cloud storage buckets, google cloud storage, edit buckets, change buckets 
+summary: Depois que seu ambiente de trabalho do Google Cloud Storage estiver disponível no Canvas, você poderá alterar algumas propriedades de bucket diretamente do BlueXP . 
+---
+= Altere as configurações de bucket do Google Cloud Storage
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+Depois que seu ambiente de trabalho do Google Cloud Storage estiver disponível no Canvas, você poderá alterar algumas propriedades de bucket diretamente do BlueXP .
+
+Observe que não é possível alterar o nome do bucket, o projeto do Google ou as configurações de proteção.
+
+As propriedades do bucket que você pode alterar incluem:
+
+* Classe de armazenamento para todos os objetos futuros no bucket.
+* Você pode optar por adicionar, editar e remover rótulos aos objetos no bucket.
+* Modo de replicação turbo - apenas se o balde estiver numa localização de região dupla.
+
+
+Você pode alterar essas configurações de bucket diretamente do BlueXP  clicando image:button-horizontal-more.gif["os três pontos mais botão"] em > *Editar detalhes do bucket* para um bucket.
+
+image:screenshot-edit-gcp-bucket.png["Uma captura de tela mostrando como selecionar o botão Editar Detalhes do balde para editar as propriedades do intervalo."]
+
+
+
+== Altere a classe de armazenamento
+
+A seção Storage class (classe de armazenamento) permite que você faça apenas determinadas alterações:
+
+* Se _Autoclasse_ tiver sido selecionado quando o bucket foi criado, você poderá desabilitar Autoclasse e selecionar outra classe de armazenamento.
+* Se qualquer outra classe de armazenamento foi selecionada quando o bucket foi criado, você pode mudar para qualquer outra classe de armazenamento - exceto _Autoclasse_.
+
+
+Objetos que estavam em uma classe diferente permanecerão nessa classe, mas quaisquer novos objetos usarão a nova configuração de classe.
+
+
+
+== Adicione ou altere rótulos para objetos no bucket
+
+Os rótulos são metadados que podem ser usados para agrupar recursos para identificar aplicações, ambientes, regiões, provedores de nuvem e muito mais. Os rótulos consistem em uma chave e um valor. Você pode adicionar rótulos a um bucket de modo que os rótulos sejam aplicados a objetos quando forem adicionados ao bucket. Você também pode alterar e excluir rótulos e valores de rótulos.
+
+Depois de adicionar ou editar um rótulo, clique em *Apply* para salvar suas alterações. Se quiser adicionar mais etiquetas, clique em *Adicionar nova etiqueta*. Pode adicionar até 10 etiquetas por balde.
+
+
+
+== Altere se a replicação turbo está ativada em localizações de região dupla
+
+Se o intervalo estiver em uma localização de região dupla, você poderá ativar ou desativar se o modo de replicação turbo está ativado ou desativado. A "replicação turbo" permite que você garanta redundância geográfica para todos os objetos recém-escritos dentro de um destino de 15 minutos.
+
+Não é possível alterar quaisquer outros detalhes de localização após a criação do intervalo.
